@@ -1,0 +1,4 @@
+export const VUE_LOGIN_IN='VUE_LOGIN_IN'
+export const VUE_LOGIN_FAULT='VUE_LOGIN_FAULT'
+export const VUE_LOGIN_ERROR='VUE_LOGIN_ERROR'
+export const VUE_LOGIN_OUT='VUE_LOGIN_OUT'
