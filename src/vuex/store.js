@@ -9,6 +9,7 @@ const store = new Vuex.Store({
   state: {
     count: 0,
     isAuthenticated: false,
+    email:'',
     msg: ''
   },
   getters: {
