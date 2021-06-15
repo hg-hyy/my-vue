@@ -7,21 +7,37 @@ import album from '../components/show/album.vue'
 import price from '../components/show/price.vue'
 import checkout from '../components/show/checkout.vue'
 import table from '../components/show/table.vue'
+import excel from '../components/show/jsonexcel.vue'
 import signin from '../components/auth/signin.vue'
 import signup from '../components/auth/signup.vue'
 import notFound from '../components/errors/notfound.vue'
+import dashboard from '../components/dashboard/index.vue'
 
-const routes = [
-  { path: '/', component: home },
-  { path: '/admin', component: admin },
-  { path: '/blog', component: blog },
-  { path: '/profile', component: profile },
+const routes = [{
+    path: '/',
+    component: home
+  },
+  {
+    path: '/admin',
+    component: admin
+  },
+  {
+    path: '/blog',
+    component: blog
+  },
+  {
+    path: '/dashboard',
+    component: dashboard
+  },
+  {
+    path: '/profile',
+    component: profile
+  },
   {
     path: '/show',
     component: show,
     // redirect: '/show/album',
-    children: [
-      {
+    children: [{
         // 当 /user/:id/profile 匹配成功，
         // UserProfile 会被渲染在 User 的 <router-view> 中
         path: 'album',
@@ -38,12 +54,28 @@ const routes = [
       {
         path: 'table',
         component: table
+      },
+      {
+        path: 'excel',
+        component: excel
       }
     ]
   },
-  { path: '/signin', component: signin },
-  { path: '/signup', component: signup },
-  { path: '/route', component: signup },
-  { path: '*', component: notFound }
+  {
+    path: '/signin',
+    component: signin
+  },
+  {
+    path: '/signup',
+    component: signup
+  },
+  {
+    path: '/route',
+    component: signup
+  },
+  {
+    path: '*',
+    component: notFound
+  }
 ]
 export default routes
